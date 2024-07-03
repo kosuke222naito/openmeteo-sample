@@ -1,0 +1,33 @@
+[project]
+name = "openmeteo-sample"
+version = "0.1.0"
+description = "Add your description here"
+authors = [
+    { name = "kosuke222naito", email = "kosuke.naito.engineer@gmail.com" },
+]
+dependencies = [
+    "openmeteo-requests>=1.2.0",
+    "requests-cache>=1.2.1",
+    "retry-requests>=2.0.0",
+    "numpy>=2.0.0",
+    "pandas>=2.2.2",
+]
+readme = "README.md"
+requires-python = ">= 3.8"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed = true
+dev-dependencies = []
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/openmeteo_sample"]
+
+[tool.mypy]
+ignore_missing_imports = true
